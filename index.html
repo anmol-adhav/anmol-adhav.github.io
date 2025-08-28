@@ -3,43 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anmol Adhav – Portfolio & Blog</title>
+  <title>Anmol Adhav – Portfolio</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
-  <header>
+  <header class="hero">
     <div class="container">
-      <img src="assets/profile.jpg" alt="Profile picture" class="profile-img"/>
+      <img src="assets/profile.jpg" alt="Anmol Adhav" class="hero-img"/>
       <h1>Anmol Adhav</h1>
-      <p class="bio">Short bio about yourself. What do you do? What are you passionate about?</p>
+      <p class="tagline">Aspiring Developer | Tech Enthusiast</p>
       <nav>
-        <a href="index.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
-  <main class="container">
-    <section>
+
+  <main>
+    <section id="about" class="about-section container">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Anmol Adhav, passionate about building meaningful digital experiences. I enjoy working with modern web technologies and am always eager to learn new skills and take on exciting projects.
+      </p>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+        <!-- Add more as needed -->
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section container">
       <h2>Projects</h2>
       <div class="projects">
         <div class="project-card">
           <img src="assets/project1.png" alt="Project 1"/>
-          <h3>Project Title 1</h3>
-          <p>Brief description of the project.</p>
-          <a href="#">View Project</a>
+          <h3>Project One</h3>
+          <p>A brief description of your project goes here.</p>
+          <a href="#" target="_blank">View Project</a>
         </div>
         <div class="project-card">
           <img src="assets/project2.png" alt="Project 2"/>
-          <h3>Project Title 2</h3>
-          <p>Brief description of the project.</p>
-          <a href="#">View Project</a>
+          <h3>Project Two</h3>
+          <p>A brief description of your project goes here.</p>
+          <a href="#" target="_blank">View Project</a>
         </div>
         <!-- Add more project cards as needed -->
       </div>
     </section>
+
+    <section id="contact" class="contact-section container">
+      <h2>Contact</h2>
+      <p>Let's connect!</p>
+      <div class="social-links">
+        <a href="mailto:your.email@example.com" target="_blank">Email</a>
+        <a href="https://github.com/Anmol-1-cloud" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <!-- Add more if needed -->
+      </div>
+    </section>
   </main>
+
   <footer>
     <div class="container">
       &copy; 2025 Anmol Adhav
