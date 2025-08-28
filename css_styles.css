@@ -47,14 +47,14 @@ body {
 .hero nav a:hover {
   background: rgba(0,0,0,0.22);
 }
-.about-section, .projects-section, .contact-section {
+.about-section, .projects-section, .blog-section, .essays-section, .contact-section {
   margin-top: 36px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 36px 24px;
 }
-.about-section h2, .projects-section h2, .contact-section h2 {
+.about-section h2, .projects-section h2, .blog-section h2, .essays-section h2, .contact-section h2 {
   margin-top: 0;
 }
 .skills {
@@ -120,6 +120,43 @@ body {
 .project-card a:hover {
   background: #313399;
 }
+.blog-section ul.blog-list,
+.essays-section ul.essay-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+.blog-list li,
+.essay-list li {
+  margin-bottom: 1.15em;
+  font-size: 1.08em;
+}
+.blog-list a,
+.essay-list a {
+  color: #4e54c8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.post-date {
+  color: #888;
+  font-size: 0.97em;
+  margin-left: 8px;
+}
+.see-all-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  background: #4e54c8;
+  padding: 6px 15px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 0.98em;
+  font-weight: 500;
+  transition: background 0.17s;
+}
+.see-all-link:hover {
+  background: #313399;
+}
 .contact-section {
   text-align: center;
 }
@@ -157,7 +194,7 @@ footer {
   .project-card {
     width: 100%;
   }
-  .about-section, .projects-section, .contact-section {
+  .about-section, .projects-section, .blog-section, .essays-section, .contact-section {
     padding: 22px 7px;
   }
   .container {
