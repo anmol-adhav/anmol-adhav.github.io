@@ -6,6 +6,8 @@
   <title>Anmol Adhav – Portfolio</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="icon" href="assets/favicon.ico" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
   <header class="hero">
@@ -95,10 +97,21 @@
       <h2>Contact</h2>
       <p>Let's connect!</p>
       <div class="social-links">
-        <a href="mailto:your.email@example.com" target="_blank">Email</a>
-        <a href="https://github.com/Anmol-1-cloud" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <!-- Add more if needed -->
+        <a href="mailto:itsanmolai@gmail.com" target="_blank" title="Email (Gmail)">
+          <i class="fa-solid fa-envelope"></i> itsanmolai@gmail.com
+        </a>
+        <a href="mailto:anmol.adhav@cpr.ku.dk" target="_blank" title="Email (CPR KU)">
+          <i class="fa-solid fa-envelope-circle-check"></i> anmol.adhav@cpr.ku.dk
+        </a>
+        <a href="https://github.com/anmol-adhav" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/anmol-adhav-phd-25335582/" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://scholar.google.com/citations?hl=en&user=ubgH720AAAAJ" target="_blank" title="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i> Google Scholar
+        </a>
       </div>
     </section>
   </main>
@@ -108,5 +121,34 @@
       &copy; 2025 Anmol Adhav
     </div>
   </footer>
+  <!-- Fallback for Google Scholar icon if not present in Font Awesome -->
+  <style>
+    /* Optional: Add spacing and style for icons/links */
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      margin-top: 1em;
+    }
+    .social-links a {
+      text-decoration: none;
+      color: #222;
+      font-size: 1.1em;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #0073b1; /* LinkedIn blue on hover */
+    }
+    /* Fallback for Google Scholar icon */
+    .fa-google-scholar:before {
+      content: "\f1a0"; /* You can use the graduation cap icon as fallback */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+    }
+  </style>
 </body>
 </html>
