@@ -1,154 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anmol Adhav – Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link rel="icon" href="assets/favicon.ico" />
-  <!-- Roboto Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <style>
-    body {
-      font-family: 'Roboto', Arial, sans-serif;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Anmol Adhav | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Roboto font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <img src="assets/profile.jpeg" alt="Anmol Adhav" class="hero-img"/>
-      <h1>Anmol Adhav</h1>
-      <p class="tagline">Postdoctoral Researcher | Structural Biology | CryoEM</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#essays">Essays</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <img src="assets/profile.jpg" alt="Anmol Adhav" class="hero-img"/>
+      <div class="header-text">
+        <h1>Anmol Adhav</h1>
+        <div class="tagline">Postdoctoral Researcher | Structural Biology | CryoEM</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
+          <a href="#essays">Essays</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="about" class="about-section container">
+    <!-- About Section -->
+    <section id="about">
       <h2>About Me</h2>
       <p>
-        Hi! I’m Anmol Adhav, a postdoctoral researcher with a PhD in biomedicine and biotechnology, specializing in structural biology and protein biochemistry. My current work focuses on CryoEM and the study of macromolecular complexes to advance our understanding of biomolecular interactions and drug design.
+        Hi! I’m Anmol Adhav, a postdoctoral researcher passionate about structural biology and cryo-electron microscopy (CryoEM). I love unraveling the mysteries of biological macromolecules and visualizing life at the atomic level. My experience spans protein structure determination, computational modeling, and collaborative science.<br><br>
+        When I’m not at the microscope or coding, I enjoy science communication and exploring new ideas in molecular biology.
       </p>
       <div class="skills">
-        <span>Structural Biology</span>
-        <span>Protein Biochemistry</span>
         <span>CryoEM</span>
-        <span>Drug Design</span>
-        <span>Biomolecular Interactions</span>
+        <span>Structural Biology</span>
+        <span>Python</span>
+        <span>Image Processing</span>
+        <span>Machine Learning</span>
+        <span>Protein Modeling</span>
+        <span>Data Visualization</span>
       </div>
     </section>
 
-    <section id="projects" class="projects-section container">
+    <!-- Projects Section -->
+    <section id="projects">
       <h2>Projects</h2>
       <div class="projects">
         <div class="project-card">
-          <img src="assets/project1.png" alt="Project 1"/>
-          <h3>Project One</h3>
-          <p>A brief description of your project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
+          <img src="assets/project1.png" alt="Project 1">
+          <h3>Automated CryoEM Workflow</h3>
+          <p>Developed a streamlined pipeline for high-throughput CryoEM image analysis, integrating preprocessing, particle picking, and 3D reconstruction using Python and open-source tools.</p>
+          <a href="https://github.com/anmol-adhav/cryoem-workflow" target="_blank"><i class="fab fa-github"></i> View Code</a>
         </div>
         <div class="project-card">
-          <img src="assets/project2.png" alt="Project 2"/>
-          <h3>Project Two</h3>
-          <p>A brief description of your project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
+          <img src="assets/project2.png" alt="Project 2">
+          <h3>Protein Structure Prediction</h3>
+          <p>Applied deep learning to predict protein structures, combining sequence data and evolutionary information for improved accuracy.</p>
+          <a href="https://github.com/anmol-adhav/protein-structure" target="_blank"><i class="fab fa-github"></i> View Code</a>
         </div>
-        <!-- Add more project cards as needed -->
+        <div class="project-card">
+          <img src="assets/project3.png" alt="Project 3">
+          <h3>Interactive Visualization Toolkit</h3>
+          <p>Built a web-based toolkit for visualizing CryoEM density maps and atomic models, enabling interactive exploration and annotation.</p>
+          <a href="https://github.com/anmol-adhav/vis-toolkit" target="_blank"><i class="fab fa-github"></i> View Code</a>
+        </div>
       </div>
     </section>
 
-    <section id="blog" class="blog-section container">
+    <!-- Blog Section -->
+    <section id="blog">
       <h2>Blog</h2>
-      <p>Thoughts, tutorials, and stories from my journey.</p>
       <ul class="blog-list">
         <li>
-          <a href="how-i-built-my-portfolio.html">How I Built My Portfolio Website</a>
-          <span class="post-date">Aug 28, 2025</span>
+          <a href="https://medium.com/@anmol-adhav/cryoem-for-beginners" target="_blank">
+            CryoEM for Beginners: A Practical Guide
+          </a>
+          <span class="post-date">Aug 2025</span>
         </li>
         <li>
-          <a href="#">Tips for Learning JavaScript as a Beginner</a>
-          <span class="post-date">Aug 25, 2025</span>
+          <a href="https://medium.com/@anmol-adhav/computational-struct-bio" target="_blank">
+            Computational Tools in Structural Biology
+          </a>
+          <span class="post-date">Jul 2025</span>
         </li>
-        <!-- Add more blog posts as needed -->
+        <li>
+          <a href="https://medium.com/@anmol-adhav/science-communication" target="_blank">
+            Why Science Communication Matters
+          </a>
+          <span class="post-date">May 2025</span>
+        </li>
       </ul>
-      <a class="see-all-link" href="blog.html">See all blog posts →</a>
+      <a href="https://medium.com/@anmol-adhav" class="see-all-link" target="_blank">See all blog posts &rarr;</a>
     </section>
 
-    <section id="essays" class="essays-section container">
+    <!-- Essays Section -->
+    <section id="essays">
       <h2>Essays</h2>
-      <p>Long-form writing on science, technology, and life.</p>
       <ul class="essay-list">
         <li>
-          <a href="the-power-of-consistency.html">The Power of Consistency in Learning</a>
-          <span class="post-date">Aug 15, 2025</span>
+          <a href="assets/essay1.pdf" target="_blank">
+            The Future of Molecular Imaging
+          </a>
+          <span class="post-date">2025</span>
         </li>
         <li>
-          <a href="#">Why Open Source Matters</a>
-          <span class="post-date">Jul 30, 2025</span>
+          <a href="assets/essay2.pdf" target="_blank">
+            AI Meets Biology: Opportunities & Challenges
+          </a>
+          <span class="post-date">2024</span>
         </li>
-        <!-- Add more essays as needed -->
       </ul>
-      <a class="see-all-link" href="#">See all essays →</a>
     </section>
 
-    <section id="contact" class="contact-section container">
+    <!-- Contact Section -->
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Let's connect!</p>
+      <p>
+        Feel free to reach out for collaborations, discussions, or just to say hello!
+      </p>
       <div class="social-links">
-        <a href="mailto:itsanmolai@gmail.com" target="_blank" title="Email (Gmail)">
-          <i class="fa-solid fa-envelope"></i> itsanmolai@gmail.com
-        </a>
-        <a href="mailto:anmol.adhav@cpr.ku.dk" target="_blank" title="Email (CPR KU)">
-          <i class="fa-solid fa-envelope-circle-check"></i> anmol.adhav@cpr.ku.dk
-        </a>
-        <a href="https://github.com/anmol-adhav" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/anmol-adhav-phd-25335582/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://scholar.google.com/citations?hl=en&user=ubgH720AAAAJ" target="_blank" title="Google Scholar">
-          <i class="fa-solid fa-graduation-cap"></i> Google Scholar
-        </a>
+        <a href="mailto:anmol.adhav@email.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/anmol-adhav" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/anmol-adhav" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://twitter.com/anmol_adhav" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      &copy; 2025 Anmol Adhav
-    </div>
+    &copy; 2025 Anmol Adhav &mdash; Designed with inspiration from <a href="https://anmolpanda.github.io/" target="_blank" style="color:#0077b6;text-decoration:underline;">anmolpanda</a>
   </footer>
-  <style>
-    /* Optional: Add spacing and style for icons/links */
-    .social-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-      margin-top: 1em;
-    }
-    .social-links a {
-      text-decoration: none;
-      color: #222;
-      font-size: 1.1em;
-      line-height: 1.6;
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      transition: color 0.2s;
-    }
-    .social-links a:hover {
-      color: #0073b1; /* LinkedIn blue on hover */
-    }
-  </style>
 </body>
 </html>
