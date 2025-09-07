@@ -1,0 +1,13 @@
+title: "Anmol Adhav"
+description: "Postdoctoral Researcher | Structural Biology & CryoEM"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://anmol-adhav.github.io" # your GitHub Pages URL
+markdown: kramdown
+theme: minima
+author:
+  name: "Anmol Adhav"
+  email: "anmol.adhav@email.com"
+  github: "anmol-adhav"
+  linkedin: "anmol-adhav"
+  twitter: "anmol_adhav"
+permalink: pretty
