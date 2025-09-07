@@ -1,154 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anmol Adhav – Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link rel="icon" href="assets/favicon.ico" />
-  <!-- Roboto Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <style>
-    body {
-      font-family: 'Roboto', Arial, sans-serif;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Anmol Adhav | Academic Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <img src="assets/profile.jpeg" alt="Anmol Adhav" class="hero-img"/>
-      <h1>Anmol Adhav</h1>
-      <p class="tagline">Postdoctoral Researcher | Structural Biology | CryoEM</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#essays">Essays</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header class="header" id="home">
+    <img src="assets/profile.jpeg" alt="Anmol Adhav" class="profile-img"/>
+    <h1>Anmol Adhav</h1>
+    <p>Postdoctoral Researcher<br>Structural Biology & CryoEM</p>
   </header>
-
-  <main>
-    <section id="about" class="about-section container">
-      <h2>About Me</h2>
-      <p>
-        Hi! I’m Anmol Adhav, a postdoctoral researcher with a PhD in biomedicine and biotechnology, specializing in structural biology and protein biochemistry. My current work focuses on CryoEM and the study of macromolecular complexes to advance our understanding of biomolecular interactions and drug design.
-      </p>
-      <div class="skills">
-        <span>Structural Biology</span>
-        <span>Protein Biochemistry</span>
-        <span>CryoEM</span>
-        <span>Drug Design</span>
-        <span>Biomolecular Interactions</span>
-      </div>
-    </section>
-
-    <section id="projects" class="projects-section container">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project-card">
-          <img src="assets/project1.png" alt="Project 1"/>
-          <h3>Project One</h3>
-          <p>A brief description of your project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
-        </div>
-        <div class="project-card">
-          <img src="assets/project2.png" alt="Project 2"/>
-          <h3>Project Two</h3>
-          <p>A brief description of your project goes here.</p>
-          <a href="#" target="_blank">View Project</a>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </section>
-
-    <section id="blog" class="blog-section container">
-      <h2>Blog</h2>
-      <p>Thoughts, tutorials, and stories from my journey.</p>
-      <ul class="blog-list">
-        <li>
-          <a href="how-i-built-my-portfolio.html">How I Built My Portfolio Website</a>
-          <span class="post-date">Aug 28, 2025</span>
-        </li>
-        <li>
-          <a href="#">Tips for Learning JavaScript as a Beginner</a>
-          <span class="post-date">Aug 25, 2025</span>
-        </li>
-        <!-- Add more blog posts as needed -->
-      </ul>
-      <a class="see-all-link" href="blog.html">See all blog posts →</a>
-    </section>
-
-    <section id="essays" class="essays-section container">
-      <h2>Essays</h2>
-      <p>Long-form writing on science, technology, and life.</p>
-      <ul class="essay-list">
-        <li>
-          <a href="the-power-of-consistency.html">The Power of Consistency in Learning</a>
-          <span class="post-date">Aug 15, 2025</span>
-        </li>
-        <li>
-          <a href="#">Why Open Source Matters</a>
-          <span class="post-date">Jul 30, 2025</span>
-        </li>
-        <!-- Add more essays as needed -->
-      </ul>
-      <a class="see-all-link" href="#">See all essays →</a>
-    </section>
-
-    <section id="contact" class="contact-section container">
-      <h2>Contact</h2>
-      <p>Let's connect!</p>
-      <div class="social-links">
-        <a href="mailto:itsanmolai@gmail.com" target="_blank" title="Email (Gmail)">
-          <i class="fa-solid fa-envelope"></i> itsanmolai@gmail.com
-        </a>
-        <a href="mailto:anmol.adhav@cpr.ku.dk" target="_blank" title="Email (CPR KU)">
-          <i class="fa-solid fa-envelope-circle-check"></i> anmol.adhav@cpr.ku.dk
-        </a>
-        <a href="https://github.com/anmol-adhav" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/anmol-adhav-phd-25335582/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://scholar.google.com/citations?hl=en&user=ubgH720AAAAJ" target="_blank" title="Google Scholar">
-          <i class="fa-solid fa-graduation-cap"></i> Google Scholar
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      &copy; 2025 Anmol Adhav
-    </div>
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <p><a href="assets/cv.pdf" target="_blank">Download my CV (PDF)</a></p>
+    <!-- Or list highlights here -->
+  </section>
+  <section id="research">
+    <h2>Research</h2>
+    <p>Summary of research interests and projects.</p>
+    <!-- Add more details or project links -->
+  </section>
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul>
+      <li>Course name, institution, year</li>
+      <li>Workshop, seminar, etc.</li>
+    </ul>
+  </section>
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>Adhav, A., et al. “Title of Paper.” <i>Journal Name</i>, Year.</li>
+      <li>Another paper...</li>
+    </ul>
+  </section>
+  <section id="talks">
+    <h2>Talks</h2>
+    <ul>
+      <li>Talk title, event, year</li>
+      <li>Another talk...</li>
+    </ul>
+  </section>
+  <section id="service">
+    <h2>Service</h2>
+    <ul>
+      <li>Editorial, committee, outreach, etc.</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:anmol.adhav@email.com">anmol.adhav@email.com</a></p>
+    <p>
+      <a href="https://github.com/anmol-adhav">GitHub</a> |
+      <a href="https://linkedin.com/in/anmol-adhav">LinkedIn</a>
+    </p>
+  </section>
+  <footer style="text-align:center; margin:2em 0 1em 0; color:#aaa;">
+    &copy; 2025 Anmol Adhav
   </footer>
-  <style>
-    /* Optional: Add spacing and style for icons/links */
-    .social-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-      margin-top: 1em;
-    }
-    .social-links a {
-      text-decoration: none;
-      color: #222;
-      font-size: 1.1em;
-      line-height: 1.6;
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      transition: color 0.2s;
-    }
-    .social-links a:hover {
-      color: #0073b1; /* LinkedIn blue on hover */
-    }
-  </style>
 </body>
 </html>
