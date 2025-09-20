@@ -53,10 +53,11 @@
   </section>
   <section id="publications">
     <h2>Publications</h2>
-    <ul>
-      <li>Adhav, A., et al. “Title of Paper.” <i>Journal Name</i>, Year.</li>
-      <li>Another paper...</li>
-    </ul>
+    <div id="publications-loading">Loading publications from ORCID...</div>
+    <div id="publications-content"></div>
+    <div id="publications-error" style="display: none;">
+      <p>Unable to load publications from ORCID. Please visit my <a href="https://orcid.org/0000-0002-3504-8675" target="_blank">ORCID profile</a> to view my publications.</p>
+    </div>
   </section>
   <section id="talks">
     <h2>Talks</h2>
@@ -83,5 +84,125 @@
   <footer style="text-align:center; margin:2em 0 1em 0; color:#aaa;">
     &copy; 2025 Anmol Adhav
   </footer>
+
+  <script>
+    // ORCID API Integration
+    const ORCID_ID = '0000-0002-3504-8675';
+    const ORCID_API_BASE = 'https://pub.orcid.org/v3.0';
+
+    async function fetchORCIDPublications() {
+      const loadingElement = document.getElementById('publications-loading');
+      const contentElement = document.getElementById('publications-content');
+      const errorElement = document.getElementById('publications-error');
+
+      try {
+        // First, get the list of works
+        const worksResponse = await fetch(`${ORCID_API_BASE}/${ORCID_ID}/works`, {
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (!worksResponse.ok) {
+          throw new Error(`HTTP error! status: ${worksResponse.status}`);
+        }
+
+        const worksData = await worksResponse.json();
+        const works = worksData.group || [];
+
+        if (works.length === 0) {
+          contentElement.innerHTML = '<p>No publications found.</p>';
+          loadingElement.style.display = 'none';
+          return;
+        }
+
+        // Fetch details for each work
+        const publicationPromises = works.slice(0, 10).map(async (workGroup) => {
+          const workSummary = workGroup['work-summary'][0];
+          const putCode = workSummary['put-code'];
+          
+          try {
+            const detailResponse = await fetch(`${ORCID_API_BASE}/${ORCID_ID}/work/${putCode}`, {
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (detailResponse.ok) {
+              return await detailResponse.json();
+            }
+          } catch (error) {
+            console.warn('Failed to fetch work detail:', error);
+          }
+          
+          // Fallback to work summary if detail fetch fails
+          return workSummary;
+        });
+
+        const publications = await Promise.all(publicationPromises);
+        displayPublications(publications.filter(pub => pub));
+
+      } catch (error) {
+        console.error('Error fetching ORCID publications:', error);
+        loadingElement.style.display = 'none';
+        errorElement.style.display = 'block';
+      }
+    }
+
+    function displayPublications(publications) {
+      const loadingElement = document.getElementById('publications-loading');
+      const contentElement = document.getElementById('publications-content');
+
+      loadingElement.style.display = 'none';
+
+      if (publications.length === 0) {
+        contentElement.innerHTML = '<p>No publications found.</p>';
+        return;
+      }
+
+      const publicationsList = publications.map(pub => {
+        // Extract publication information
+        const title = pub.title?.title?.value || pub['work-summary']?.title?.title?.value || 'Unknown Title';
+        const journal = pub['journal-title']?.value || pub['work-summary']?.['journal-title']?.value || '';
+        const year = pub['publication-date']?.year?.value || 
+                     pub['work-summary']?.['publication-date']?.year?.value || 
+                     new Date(pub['created-date']?.value || pub['work-summary']?.['created-date']?.value).getFullYear() || '';
+        const type = pub.type || pub['work-summary']?.type || 'article';
+        
+        // Build authors string (simplified - ORCID doesn't always provide full author details)
+        let authorsStr = '';
+        if (pub.contributors && pub.contributors.contributor) {
+          const authors = pub.contributors.contributor
+            .filter(c => c.role === 'author')
+            .map(c => c['credit-name']?.value || '')
+            .filter(name => name);
+          if (authors.length > 0) {
+            authorsStr = authors.join(', ') + '. ';
+          }
+        }
+
+        // Create formatted publication entry
+        let pubHtml = '<li>';
+        if (authorsStr) {
+          pubHtml += authorsStr;
+        }
+        pubHtml += `<strong>"${title}"</strong>`;
+        if (journal) {
+          pubHtml += ` <em>${journal}</em>`;
+        }
+        if (year) {
+          pubHtml += `, ${year}`;
+        }
+        pubHtml += '.</li>';
+
+        return pubHtml;
+      }).join('');
+
+      contentElement.innerHTML = `<ul>${publicationsList}</ul>`;
+    }
+
+    // Load publications when page loads
+    document.addEventListener('DOMContentLoaded', fetchORCIDPublications);
+  </script>
 </body>
 </html>
