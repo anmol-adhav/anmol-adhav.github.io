@@ -162,3 +162,52 @@ a:hover {
     font-size: 1.5rem;
   }
 }
+
+/* Publications specific styles */
+.publications-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.publication-item {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-left: 3px solid #3498db;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.publication-item:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.2s ease;
+}
+
+.publication-item a {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.publication-item a:hover {
+  text-decoration: underline;
+}
+
+.orcid-attribution {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666;
+}
+
+.orcid-attribution a {
+  color: #3498db;
+}
+
+/* Loading state styles */
+#publications-content p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
