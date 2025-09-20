@@ -1,0 +1,164 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #e9ecef;
+}
+
+/* Header layout styles */
+.header {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.header-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes it circular */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Optional: adds subtle shadow */
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.header-text > p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.bio p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Section styles */
+section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Link styles */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .header-text h1 {
+    font-size: 2rem;
+  }
+  
+  .header-text > p {
+    font-size: 1.1rem;
+  }
+  
+  section {
+    padding: 1.5rem 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
