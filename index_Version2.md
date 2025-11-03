@@ -17,4 +17,4 @@ When I’m not at the microscope or coding, I enjoy science communication and ex
 
 **Contact:**  
 - Email: [anmol.adhav@email.com](mailto:anmol.adhav@email.com)  
-- [GitHub](https://github.com/anmol-adhav) | [LinkedIn](https://linkedin.com/in/anmol-adhav) | [Twitter](https://twitter.com/anmol_adhav)
+- [GitHub](https://github.com/anmol-adhav) | [LinkedIn](https://www.linkedin.com/in/anmol-adhav-phd-25335582/) | [Twitter](https://twitter.com/anmol_adhav)
