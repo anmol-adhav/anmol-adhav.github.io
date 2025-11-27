@@ -211,3 +211,203 @@ a:hover {
   color: #666;
   font-style: italic;
 }
+
+/* Headline styles */
+.headline {
+  font-size: 1.1rem;
+  color: #3498db;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Skills section styles */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-list li {
+  background-color: #e8f4fc;
+  color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  border: 1px solid #3498db;
+  margin-bottom: 0;
+}
+
+/* Experience section styles */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-left: 3px solid #3498db;
+  border-radius: 4px;
+}
+
+.experience-item h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.experience-item .org {
+  color: #555;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.experience-item .meta {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Education section styles */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-item {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-left: 3px solid #3498db;
+  border-radius: 4px;
+}
+
+.education-item h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.education-item .org {
+  color: #555;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.education-item .meta {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Certifications section styles */
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certifications-list li {
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.badge.award {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.badge.certification {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Languages section styles */
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.languages-list li {
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+
+/* Contact icons styles */
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Mobile responsive styles for new sections */
+@media (max-width: 600px) {
+  .headline {
+    font-size: 1rem;
+  }
+
+  .skills-list {
+    gap: 0.5rem;
+  }
+
+  .skills-list li {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .experience-item h3,
+  .education-item h3 {
+    font-size: 1rem;
+  }
+
+  .certifications-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .languages-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-icons {
+    gap: 1rem;
+  }
+}
