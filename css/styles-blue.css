@@ -1,0 +1,157 @@
+body {
+  background-color: #0b1020;
+  color: #e3ecff;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #070a14;
+  padding: 0.8em 0;
+}
+.navbar .container {
+  display: flex;
+  gap: 1.5em;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+.navbar a {
+  text-decoration: none;
+  color: #e3ecff;
+  font-weight: 500;
+  padding: 0.2em 0.8em;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar a:hover, .navbar a:focus {
+  background-color: #17324a;
+  color: #1dd2b3;
+}
+
+header.intro {
+  text-align: center;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+}
+header.intro h1 {
+  color: #f7fbff;
+  font-size: 2.6em;
+  margin-bottom: .3em;
+  font-weight: 700;
+}
+header.intro .subtitle {
+  color: #1dd2b3;
+  font-size: 1.3em;
+  margin-bottom: 0.7em;
+  font-weight: 400;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto 2.6em auto;
+  padding: 0;
+}
+section h2 {
+  color: #f7fbff;
+  border-bottom: 2px solid #1dd2b3;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.8em;
+  font-size: 1.6em;
+}
+
+.card, .experience-card, .education-card, .publication-card {
+  background-color: #101727;
+  border-left: 3px solid #1dd2b3;
+  color: #e3ecff;
+  padding: 1.1em 1.2em 0.7em 1.3em;
+  margin-bottom: 1.6em;
+  box-shadow: 0 2px 10px rgba(29, 210, 179, 0.07);
+  border-radius: 10px;
+}
+.card-title {
+  color: #f7fbff;
+  margin-bottom: 0.2em;
+}
+.badge {
+  background-color: #17324a;
+  color: #1dd2b3 !important;
+  border: 1px solid #1dd2b3;
+  border-radius: 12px;
+  padding: 0.2em 0.7em;
+  font-size: 0.91em;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.skill-chip, .chip {
+  background-color: #101727;
+  color: #e3ecff;
+  border: 1px solid #1dd2b3;
+  border-radius: 18px;
+  padding: 0.23em 1em;
+  margin: 0.15em 0.18em 0.15em 0;
+  font-size: 0.96em;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+.skill-chip:hover, .chip:hover {
+  background-color: #17324a;
+  color: #1dd2b3;
+}
+
+.contact-icon, .icon-link {
+  color: #1dd2b3;
+  display: inline-block;
+  margin-right: 1.2em;
+  vertical-align: middle;
+  transition: transform 0.18s, opacity 0.18s;
+  text-decoration: none;
+}
+.contact-icon:last-child, .icon-link:last-child {
+  margin-right: 0;
+}
+.contact-icon:hover, .icon-link:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+  color: #1dd2b3 !important;
+}
+
+footer {
+  text-align: center;
+  padding: 1.8em 0 0.7em 0;
+  color: #e3ecff;
+  background: none;
+  font-size: 1em;
+}
+footer hr {
+  border: none;
+  border-top: 1.5px solid #17324a;
+  margin: 0 0 1.1em 0;
+}
+
+::-webkit-scrollbar {
+  background: #101727;
+  width: 0.55em;
+}
+::-webkit-scrollbar-thumb {
+  background: #17324a;
+  border-radius: 2em;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 700px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 0.6em;
+    padding: 0 1em;
+  }
+  section, header.intro {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+  }
+  .card, .experience-card, .education-card, .publication-card {
+    padding: 1em 0.7em 0.7em 0.7em;
+  }
+}
