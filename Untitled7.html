@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anmol Adhav | Structural Biologist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic portfolio of Anmol Adhav, structural biologist focused on bacterial defense systems, drug design, and enzyme characterization.">
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --bg-sidebar: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: rgba(37,99,235,0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+
+    .profile-block {
+      text-align: center;
+    }
+
+    .profile-photo-wrapper {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 0.75rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--border);
+      background: #e5e7eb;
+    }
+
+    .profile-photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .nav-section-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    nav li {
+      margin-bottom: 0.25rem;
+    }
+    nav a {
+      color: #374151;
+      padding: 0.15rem 0.25rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    nav a:hover {
+      color: var(--accent);
+      text-decoration: none;
+      background: var(--accent-soft);
+    }
+
+    .side-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .side-meta p {
+      margin: 0 0 0.4rem;
+    }
+
+    .side-links a {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+    .cv-link:hover {
+      background: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem 2.25rem 3rem;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.35rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      max-width: 40rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.4rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    p {
+      margin-top: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.2rem;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-top: 0.5rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .pill {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+      background: #ffffff;
+      color: #374151;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+      margin-top: 0.6rem;
+    }
+
+    .project {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 0.9rem;
+      background: #ffffff;
+    }
+
+    .project-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .inline-links a {
+      margin-right: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    #orcid-publications ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #orcid-publications li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 2.25rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      aside {
+        position: static;
+        max-height: none;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      main {
+        padding: 1.5rem 1.25rem 2.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <!-- LEFT SIDEBAR -->
+  <aside>
+    <div class="profile-block">
+      <div class="profile-photo-wrapper">
+        <!-- Update src if you move the file (e.g. img/profile.jpg) -->
+        <img src="profile.jpg" alt="Profile photo of Anmol Adhav">
+      </div>
+      <div class="name">Anmol Adhav</div>
+      <div class="role">Postdoctoral Researcher · Structural Biology</div>
+      <a class="cv-link" href="files/Anmol_Adhav_CV.pdf" target="_blank" rel="noopener noreferrer">
+        Download CV (PDF)
+      </a>
+    </div>
+
+    <div>
+      <div class="nav-section-title">Sections</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About &amp; journey</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#projects">Selected projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="side-meta">
+      <p><strong>Affiliation</strong><br>
+         Novo Nordisk Foundation Center for Protein Research<br>
+         University of Copenhagen</p>
+      <p><strong>Interests</strong><br>
+         Structural biology · Bacterial defense systems · Drug design · Enzyme mechanisms</p>
+    </div>
+
+    <div class="side-links">
+      <div class="nav-section-title">Profiles</div>
+      <a href="mailto:anmolsadhav11@gmail.com">Gmail</a>
+      <a href="https://scholar.google.com/citations?user=ubgH720AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://github.com/anmol-adhav" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/anmol-adhav-phd-25335582/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://twitter.com/anmoladhav" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div>
+    <main>
+      <!-- ABOUT / JOURNEY -->
+      <section id="about">
+        <h1>About &amp; journey</h1>
+        <p class="subtitle">
+          Structural biologist working at the intersection of bacterial defense systems, viral proteins, and
+          structure‑based drug design. Currently a postdoctoral researcher at the Novo Nordisk Foundation Center
+          for Protein Research in Copenhagen.
+        </p>
+
+        <div class="two-col">
+          <div>
+            <p>
+              My scientific path began in Pune, where an integrated biotechnology program at Savitribai Phule Pune
+              University gave me a broad foundation in molecular biology and bioinformatics. Working on trehalase
+              in insect gut endosymbionts introduced me to enzymes as molecular machines and to the idea that
+              understanding their structure could unlock ways to modulate metabolism and host–pathogen interactions.
+            </p>
+            <p>
+              Moving to Spain as a Marie Skłodowska‑Curie early stage researcher sharpened that focus. At the
+              Instituto de Biomedicina de Valencia and the University of Valencia, I combined protein
+              crystallography, biochemistry, and computational modeling to study targets ranging from trehalase and
+              plant defense components to the SARS‑CoV‑2 spike glycoprotein and bacterial signaling systems.
+            </p>
+            <p>
+              A visit to Oxford Drug Design immersed me in structure‑based drug discovery—how structural information
+              supports hit identification, lead optimization, and practical decisions about target selection. That
+              experience continues to influence how experiments are designed and how structural data are interpreted.
+            </p>
+            <p>
+              Today, as a postdoctoral researcher in Copenhagen, my work focuses on bacterial defense systems and
+              related molecular machines. Across these stages—from Pune to Valencia to Copenhagen—the common thread is
+              a fascination with how proteins work at atomic detail and how that understanding can be translated into
+              practical impact in drug design, biotechnology, and synthetic biology.
+            </p>
+          </div>
+          <div>
+            <h3>Snapshot</h3>
+            <ul>
+              <li>Postdoctoral Researcher, NNF‑CPR, University of Copenhagen</li>
+              <li>PhD in Biomedicine &amp; Biotechnology, University of Valencia</li>
+              <li>Marie Skłodowska‑Curie Actions fellow</li>
+              <li>Experience spanning India, Spain, Denmark, and UK industry</li>
+            </ul>
+            <div class="pill-row">
+              <span class="pill">Structural biology</span>
+              <span class="pill">Bacterial defense</span>
+              <span class="pill">Protein crystallography</span>
+              <span class="pill">Drug design</span>
+              <span class="pill">Biochemistry</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="muted">Focused skills across structural biology, biochemistry, and computational work.</p>
+        <ul>
+          <li>Protein expression and purification</li>
+          <li>Biophysical and biochemical characterization of proteins</li>
+          <li>Fast Protein Liquid Chromatography (FPLC)</li>
+          <li>Macromolecular crystallography: crystallization, data collection, structure solution</li>
+          <li>Exposure to cryo‑EM workflows and data interpretation</li>
+          <li>Structure‑based drug design and protein–ligand analysis</li>
+          <li>Computational tools for structural analysis and modeling</li>
+        </ul>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <h3>Postdoctoral Researcher</h3>
+        <p><strong>Novo Nordisk Foundation Center for Protein Research, University of Copenhagen</strong><br>
+           July 2024 – Present · Copenhagen, Denmark
+        </p>
+        <ul>
+          <li>Studying bacterial defense systems and related immunity mechanisms using structural and biochemical approaches.</li>
+          <li>Combining crystallography, biochemistry, and computational analysis to understand protein function at atomic detail.</li>
+          <li>Collaborating across disciplines to explore biotechnological and therapeutic applications of these systems.</li>
+        </ul>
+
+        <h3>Doctoral Researcher (Marie Skłodowska‑Curie Early Stage Researcher)</h3>
+        <p><strong>Instituto de Biomedicina de Valencia / University of Valencia</strong><br>
+           June 2018 – November 2024 · Valencia, Spain
+        </p>
+        <ul>
+          <li>Investigated structural and functional aspects of enzymes and viral proteins, including trehalase and SARS‑CoV‑2 spike.</li>
+          <li>Developed and optimized crystallography pipelines and biochemical assays.</li>
+          <li>Integrated computational modeling with experimental structural biology.</li>
+        </ul>
+
+        <h3>Visiting Researcher</h3>
+        <p><strong>Oxford Drug Design</strong><br>
+           May 2019 – June 2019 · Oxford, UK
+        </p>
+        <ul>
+          <li>Contributed to structure‑guided inhibitor discovery projects.</li>
+          <li>Gained exposure to practical constraints and strategy in industrial drug design.</li>
+        </ul>
+
+        <h3>Project Assistant</h3>
+        <p><strong>Savitribai Phule Pune University</strong><br>
+           August 2017 – April 2018 · Pune, India
+        </p>
+        <ul>
+          <li>Worked on trehalase and insect gut endosymbionts, strengthening interest in enzyme mechanisms and host–microbe interactions.</li>
+        </ul>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2>Education</h2>
+        <h3>PhD, Biomedicine and Biotechnology</h3>
+        <p><strong>University of Valencia</strong><br>September 2018 – November 2024</p>
+
+        <h3>M.Tech, Biotechnology</h3>
+        <p><strong>Savitribai Phule Pune University</strong><br>2016 – August 2017</p>
+
+        <h3>Integrated M.Tech, Biotechnology</h3>
+        <p><strong>Savitribai Phule Pune University (Institute of Bioinformatics and Biotechnology)</strong><br>2011 – 2016</p>
+      </section>
+
+      <!-- RESEARCH -->
+      <section id="research">
+        <h2>Research</h2>
+        <p class="muted">Summary of research interests and current themes.</p>
+        <ul>
+          <li>Structural and functional analysis of bacterial defense systems and two‑component signaling.</li>
+          <li>Structural biology of viral proteins, including SARS‑CoV‑2 spike and variant effects.</li>
+          <li>Enzyme characterization in host–pathogen and plant–insect interaction contexts, especially trehalase.</li>
+          <li>Structure‑based drug design and inhibitor discovery at the interface of academia and industry.</li>
+        </ul>
+      </section>
+
+      <!-- SELECTED PROJECTS -->
+      <section id="projects">
+        <h2>Selected projects</h2>
+        <p class="muted">Representative projects that illustrate how these themes connect.</p>
+        <div class="project-list">
+          <article class="project">
+            <h3>Trehalase structure &amp; inhibition in insect gut endosymbionts</h3>
+            <div class="project-meta">Crystallography · Enzyme kinetics · Host–microbe interactions</div>
+            <p>
+              Solved structures and characterized the kinetics of trehalase from insect gut endosymbionts to
+              understand how trehalose metabolism is controlled and how it might be selectively targeted.
+            </p>
+            <p>
+              <a href="https://febs.onlinelibrary.wiley.com/doi/pdf/10.1111/febs.14760" target="_blank" rel="noopener noreferrer">
+                FEBS Journal article
+              </a>
+              &nbsp;·&nbsp;
+              <a href="https://pubs.acs.org/doi/full/10.1021/acsomega.5c05175" target="_blank" rel="noopener noreferrer">
+                ACS Omega article
+              </a>
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>SARS‑CoV‑2 spike variants and functional impact</h3>
+            <div class="project-meta">Structural modeling · Virology collaboration</div>
+            <p>
+              Investigated how spike mutations influence stability, cleavage, and immune recognition, combining
+              structural modeling with clinical and virological data from collaborators.
+            </p>
+            <p>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acsomega.5c05175" target="_blank" rel="noopener noreferrer">
+                Representative spike‑related article
+              </a>
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Bacterial defense modules and signaling systems</h3>
+            <div class="project-meta">Crystallography · Biochemistry · Bacterial immunity</div>
+            <p>
+              Ongoing work on bacterial defense systems and two‑component signaling pathways to map how bacteria
+              sense and respond to phages and other stresses at the structural level.
+            </p>
+            <p>
+              <span class="muted">Project in progress · details and outputs coming soon</span>
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Structure‑guided inhibitor design with Oxford Drug Design</h3>
+            <div class="project-meta">Structure‑based drug design · Industry collaboration</div>
+            <p>
+              Contributed structural analysis and modeling to inhibitor discovery efforts, helping to prioritize
+              compounds and interpret SAR in collaboration with medicinal chemists.
+            </p>
+            <p>
+              <span class="muted">Confidential project · representative of industry‑oriented work</span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PUBLICATIONS (ORCID) -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <p class="muted">
+          Selected works from ORCID (0000‑0002‑3504‑8675). This list updates automatically.
+        </p>
+        <div id="orcid-publications">
+          Loading publications from ORCID...
+        </div>
+        <p class="inline-links" style="margin-top:0.75rem;">
+          <a href="https://scholar.google.com/citations?user=ubgH720AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </p>
+      </section>
+
+      <!-- BLOG -->
+      <section id="blog">
+        <h2>Blog</h2>
+        <p>
+          Occasional notes on structural biology, bacterial defense systems, and experiences moving between countries
+          and scientific environments. This will gradually collect short, readable posts rather than long essays.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="inline-links">
+          <a href="mailto:anmolsadhav11@gmail.com">Gmail</a>
+          <a href="https://scholar.google.com/citations?user=ubgH720AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/anmol-adhav" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/anmol-adhav-phd-25335582/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/anmoladhav" target="_blank" rel="noopener noreferrer">X</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Anmol Adhav · Academic Portfolio · Last updated 2026‑01
+    </footer>
+  </div>
+</div>
+
+<!-- ORCID publications loader -->
+<script>
+  // Simple ORCID public API integration
+  // Uses JSON from the public API and renders a basic list of works.
+  const orcidId = "0000-0002-3504-8675";
+  const orcidEndpoint = `https://pub.orcid.org/v3.0/${orcidId}/works`;
+
+  function renderOrcidWorks(works) {
+    if (!Array.isArray(works) || works.length === 0) {
+      document.getElementById("orcid-publications").textContent =
+        "No works found on ORCID or unable to display them.";
+      return;
+    }
+
+    // Sort by publication date (if present) descending
+    works.sort((a, b) => {
+      const da = a["publication-date"];
+      const db = b["publication-date"];
+      const ya = da && da.year ? parseInt(da.year.value, 10) : 0;
+      const yb = db && db.year ? parseInt(db.year.value, 10) : 0;
+      return yb - ya;
+    });
+
+    // Limit to ~10 for readability
+    const slice = works.slice(0, 10);
+    const ul = document.createElement("ul");
+
+    slice.forEach(w => {
+      const title = w.title && w.title.title && w.title.title.value
+        ? w.title.title.value
+        : "Untitled work";
+      const journal = w["journal-title"] && w["journal-title"].value
+        ? w["journal-title"].value
+        : "";
+      const year = w["publication-date"] && w["publication-date"].year
+        ? w["publication-date"].year.value
+        : "";
+      let url = "";
+
+      if (Array.isArray(w["external-ids"] && w["external-ids"]["external-id"])) {
+        const doiId = w["external-ids"]["external-id"].find(e => e["external-id-type"] === "doi");
+        if (doiId && doiId["external-id-value"]) {
+          url = "https://doi.org/" + doiId["external-id-value"];
+        }
+      }
+
+      const li = document.createElement("li");
+      const text = document.createElement("span");
+
+      if (url) {
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = title;
+        li.appendChild(link);
+      } else {
+        text.textContent = title;
+        li.appendChild(text);
+      }
+
+      const meta = [];
+      if (journal) meta.push(journal);
+      if (year) meta.push(year);
+      if (meta.length) {
+        const metaSpan = document.createElement("span");
+        metaSpan.className = "muted";
+        metaSpan.style.display = "block";
+        metaSpan.textContent = meta.join(" · ");
+        li.appendChild(metaSpan);
+      }
+
+      ul.appendChild(li);
+    });
+
+    const container = document.getElementById("orcid-publications");
+    container.innerHTML = "";
+    container.appendChild(ul);
+  }
+
+  fetch(orcidEndpoint, {
+    headers: { Accept: "application/json" }
+  })
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(json => {
+      const works = (json && json.group)
+        ? json.group.map(g => g["work-summary"][0])
+        : [];
+      renderOrcidWorks(works);
+    })
+    .catch(() => {
+      document.getElementById("orcid-publications").textContent =
+        "Unable to load publications from ORCID at the moment.";
+    });
+</script>
+</body>
+</html>
