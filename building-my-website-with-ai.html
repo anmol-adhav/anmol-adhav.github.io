@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Built My Personal Academic Website With AI</title>
+  <style>
+    :root {
+      --bg: #f8f6f2;
+      --surface: #ffffff;
+      --text: #1f1f1f;
+      --muted: #626262;
+      --border: #e2ddd6;
+      --accent: #0f5c66;
+      --accent-soft: #e7f1f2;
+      --max: 860px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+    }
+    h1, h2, h3 { line-height: 1.2; color: #151515; }
+    h1 { font-size: clamp(2rem, 5vw, 3.3rem); margin: 0 0 0.8rem; }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2.4rem;
+      margin-bottom: 0.9rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid var(--border);
+    }
+    h3 { font-size: 1.08rem; margin-top: 1.5rem; margin-bottom: 0.4rem; }
+    p { margin: 0 0 1rem; color: var(--text); }
+    .lead { font-size: 1.08rem; color: var(--muted); }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .pill {
+      border: 1px solid var(--border);
+      background: #fcfbf9;
+      border-radius: 999px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 1.4rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin-bottom: 0.55rem; }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.95em;
+    }
+    pre {
+      background: #fbfaf8;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 14px;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      background: #fbfefe;
+      padding: 0.9rem 1rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+      color: var(--muted);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .wrap { padding: 1.25rem 0.8rem 3rem; }
+      .hero, .content { padding: 1.25rem 1rem; border-radius: 14px; }
+      .lead { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Blog</div>
+      <h1>How I Built My Personal Academic Website With AI</h1>
+      <p class="lead">A beginner-friendly, personal walkthrough of how I went from no website to a live academic portfolio using GitHub, GitHub Pages, and AI tools like Perplexity, Claude, and GitHub Copilot.</p>
+      <div class="meta">
+        <span class="pill">Mixed audience</span>
+        <span class="pill">Beginner-friendly</span>
+        <span class="pill">GitHub Pages</span>
+        <span class="pill">AI-assisted workflow</span>
+      </div>
+    </section>
+
+    <article class="content">
+      <p>When I decided to build my personal academic website, I did not want a complicated stack, a paid hosting plan, or a setup that I would forget how to maintain six months later. I wanted something simple, fast, inexpensive, and fully under my control.</p>
+      <p>That is why I chose a static website hosted on GitHub Pages. This post is the guide I wish I had when I started, and it is written so that someone can follow it from scratch without needing to constantly search for missing steps elsewhere.</p>
+
+      <h2>Why I built it this way</h2>
+      <p>The first decision was not the design. It was the system. I wanted version control, free hosting, and a simple setup that would still make sense to me months later. A static website on GitHub Pages solved all of that at once.</p>
+      <p>I also liked that the website would live in the same place as the code. That means updates are easy, changes are tracked, and deployment is tightly connected to the repo itself.</p>
+
+      <h2>What AI helped with</h2>
+      <p>I used Perplexity, Claude, and GitHub Copilot at different stages. AI helped me draft sections, shape the HTML and CSS, improve layout decisions, fix mobile issues, and think through integrations like ORCID publications.</p>
+      <div class="note">The key lesson was that AI works best when prompts are specific. Asking for “a website” gives generic output. Asking for “a simple and spacious academic portfolio in plain HTML/CSS/JS” gives something much more usable.</div>
+
+      <h2>Step 1: Create a GitHub account</h2>
+      <p>If you are starting from zero, go to GitHub and create a personal account. Verify your email, because GitHub requires that for some basic tasks. I also strongly suggest enabling two-factor authentication early for security.</p>
+      <p>GitHub matters here for three reasons: it stores your files, tracks all changes over time, and can host the finished website through GitHub Pages.</p>
+
+      <h2>Step 2: Create the repository</h2>
+      <p>A repository is your website project folder on GitHub. For a personal website, the easiest option is to create a repo named exactly <code>yourusername.github.io</code>. That naming convention gives you the clean default website URL.</p>
+      <p>You can add a README during setup. I recommend doing that because even a simple project benefits from basic documentation from day one.</p>
+
+      <h2>Step 3: Add index.html</h2>
+      <p>GitHub Pages needs an entry file at the top level of the publishing source, and <code>index.html</code> is the most straightforward starting point. Your first version can be very small.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Your Name&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Your Name&lt;/h1&gt;
+  &lt;p&gt;This is my personal website.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <p>This tiny page is enough to prove that the publishing pipeline works before you spend time polishing the design.</p>
+
+      <h2>Step 4: Deploy with GitHub Pages</h2>
+      <p>Once the repo exists and <code>index.html</code> is in place, go to the repository settings and open the Pages section. Enable GitHub Pages and wait for the build to finish. GitHub will then provide a live site link.</p>
+      <p>Do not worry if it takes a few minutes. The first deployment is sometimes not instant, and that is normal.</p>
+
+      <h2>Step 5: Build the real structure with AI</h2>
+      <p>After confirming that a minimal page works, I started asking AI to help me build the real site structure. I described the site as a simple, spacious academic portfolio and asked for sections like About, Skills, Experience, Research, Publications, Blog, and Contact.</p>
+      <p>I found it much better to iterate in small steps than to ask for one giant perfect file. Build the structure first, then content, then styling, then responsiveness.</p>
+
+      <h2>Step 6: Add your real content</h2>
+      <p>This is the part where your own thinking matters most. AI can help you phrase things, but it cannot decide your identity for you. I had to decide what I wanted the website to say about my work, my research, and the kind of reader I wanted to reach.</p>
+      <p>For an academic portfolio, a simple rule works well: explain yourself in plain language first, then add technical detail where needed.</p>
+
+      <h2>Step 7: Integrate ORCID publications</h2>
+      <p>I wanted my publications to update from ORCID instead of editing them manually on the site every time. The idea is simple: JavaScript fetches your public works from the ORCID API and inserts them into a placeholder section on the page.</p>
+      <pre><code>https://pub.orcid.org/v3.0/YOUR-ORCID-ID/works</code></pre>
+      <p>The reason this is useful is maintenance. ORCID becomes the source of truth, and the site becomes a clean display layer.</p>
+
+      <h2>Step 8: Make it mobile friendly</h2>
+      <p>This took more than one pass. A site can look perfectly fine on a laptop and still feel awkward on a phone. The most important changes were turning the layout into a single column on small screens, hiding the desktop sidebar, and adding a hamburger-driven slide-in menu.</p>
+      <p>That experience taught me that responsive design is not something you assume. It has to be tested and refined.</p>
+
+      <h2>Step 9: Fix problems without rebuilding everything</h2>
+      <p>One mistake I made early was treating every bug like a reason to regenerate the whole page. That usually creates more problems. A better approach is to inspect the exact part that is broken and fix only that section.</p>
+      <p>In practice, that means asking AI for diagnosis, not only for replacement. That shift made the workflow much more stable.</p>
+
+      <h2>What worked well for me</h2>
+      <ul>
+        <li>Keeping the stack simple: HTML, CSS, JavaScript, GitHub Pages.</li>
+        <li>Using AI in small passes instead of giant rewrites.</li>
+        <li>Testing desktop and mobile separately.</li>
+        <li>Adding integrations only after the base layout was stable.</li>
+        <li>Writing content in my own voice instead of accepting generic text.</li>
+      </ul>
+
+      <h2>A checklist you can follow</h2>
+      <ul>
+        <li>Create a GitHub account and verify your email.</li>
+        <li>Create a repository named <code>yourusername.github.io</code>.</li>
+        <li>Add a minimal <code>index.html</code>.</li>
+        <li>Enable GitHub Pages.</li>
+        <li>Confirm the first deployment works.</li>
+        <li>Use AI to draft the site structure.</li>
+        <li>Replace placeholders with your own content.</li>
+        <li>Add ORCID or other small integrations if needed.</li>
+        <li>Test on mobile and improve the navigation.</li>
+        <li>Keep refining the site gradually.</li>
+      </ul>
+
+      <h2>Final thought</h2>
+      <p>Using AI did not remove the need to think. What it removed was the intimidation of getting started. Once I had a simple live website, improving it became much easier. That is the real value here: not that AI magically builds everything, but that it helps turn hesitation into momentum.</p>
+    </article>
+  </div>
+</body>
+</html>
