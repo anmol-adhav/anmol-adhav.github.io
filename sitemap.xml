@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/download/a2b4845ba-adb757dd7/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://anmol-adhav.github.io/</loc>
+       <lastmod>2026-04-11T08:49:30+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://anmol-adhav.github.io/files/Anmol_Adhav_CV.pdf</loc>
+       <lastmod>2026-04-11T08:49:30+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://anmol-adhav.github.io/building-my-website-with-ai.html</loc>
+       <lastmod>2026-04-11T08:49:30+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+</urlset>
